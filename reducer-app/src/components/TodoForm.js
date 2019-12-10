@@ -18,8 +18,9 @@ const TodoForm = () => {
         onChange={handleChange}
       />
       <button
-        onClick={() => {
-          dispatch({ type: "ADD-ITEM", payload: { item } });
+        onClick={e => {
+          e.preventDefault();
+          dispatch({ type: "ADD-ITEM", payload: item });
         }}
       >
         Add Item
